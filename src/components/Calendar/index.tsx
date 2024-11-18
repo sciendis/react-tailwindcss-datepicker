@@ -14,6 +14,7 @@ import {
     nextMonth,
     previousMonth
 } from "../../helpers";
+import { DateType } from "../../types";
 import {
     ChevronLeftIcon,
     ChevronRightIcon,
@@ -26,8 +27,6 @@ import Days from "./Days";
 import Months from "./Months";
 import Week from "./Week";
 import Years from "./Years";
-
-import { DateType } from "types";
 
 interface Props {
     date: dayjs.Dayjs;
