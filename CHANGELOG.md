@@ -1,5 +1,11 @@
 # @sciendis/react-tailwindcss-datepicker
 
+## 1.8.1
+
+### Patch Changes
+
+-   e97181d: fix maximum update depth bug
+
 ## 1.7.3
 
 ### Patch Changes
