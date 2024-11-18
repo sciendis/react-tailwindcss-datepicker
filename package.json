@@ -1,6 +1,6 @@
 {
     "name": "@sciendis/react-tailwindcss-datepicker",
-    "version": "1.8.1",
+    "version": "1.8.2",
     "description": " Modern date range picker component for React using Tailwind and dayjs.",
     "main": "dist/index.js",
     "module": "dist/index.mjs",
@@ -51,7 +51,6 @@
         "autoprefixer": "^10.4.13",
         "dayjs": "^1.11.7",
         "eslint": "^8.29.0",
-        "eslint-config-next": "^13.1.1",
         "eslint-config-prettier": "^8.5.0",
         "eslint-plugin-import": "^2.26.0",
         "eslint-plugin-prettier": "^4.2.1",
