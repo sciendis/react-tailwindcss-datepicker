@@ -1,5 +1,11 @@
 # @sciendis/react-tailwindcss-datepicker
 
+## 1.8.3
+
+### Patch Changes
+
+-   f689819: fix export types
+
 ## 1.8.2
 
 ### Patch Changes
