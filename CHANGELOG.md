@@ -1,5 +1,23 @@
 # @sciendis/react-tailwindcss-datepicker
 
+## 1.8.4
+
+### Patch Changes
+
+-   holds the changes from version 1.8.1
+
+## 1.8.3
+
+### Patch Changes
+
+-   bump version as npm does not recoginze previously unpublished version
+
+## 1.8.2
+
+### Patch Changes
+
+-   bump version as npm does not recoginze previously unpublished version
+
 ## 1.8.1
 
 ### Patch Changes
