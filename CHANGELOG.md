@@ -1,5 +1,11 @@
 # @sciendis/react-tailwindcss-datepicker
 
+## 1.8.1
+
+### Patch Changes
+
+-   fix dependency array in datepicker to prevent rerenders and fix max update depth bug
+
 ## 1.8.0
 
 ### Minor Changes
