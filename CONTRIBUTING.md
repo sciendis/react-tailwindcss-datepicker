@@ -3,41 +3,24 @@
 Thanks for your interest in contributing to `react-tailwindcss-datepicker`! Please take a moment to
 review this document **before submitting a pull request**.
 
--   [Pull requests](#pull-requests)
 -   [Installation](#installation)
 -   [Coding standards](#coding-standards)
 -   [Running playground](#running-playgrounds)
 -   [Before you make a Pull Request](#before-you-make-a-pull-request)
-
-## Pull requests
-
-**Please ask first before starting work on any significant new features.**
-
-It's never a fun experience to have your pull request declined after investing a lot of time and
-effort into a new feature. To avoid this from happening, we request that contributors create
-[an issue](https://github.com/sciendis/react-tailwindcss-datepicker/issues) to first discuss any
-significant new features.
+-   [Publish the updated Datepicker](#publish-the-updated-datepicker)
 
 ## Installation
 
-You only require a `yarn install` in the root directory to install everything you need.
+You only require a `npm install` in the root directory to install everything you need.
 
 ```sh
-yarn install
+npm install
 ```
 
 ## Coding standards
 
 We use `prettier` for making sure that the codebase is formatted consistently. To automatically fix
 any style violations in your code, you can run:
-
-**Using yarn**
-
-```sh
-yarn pret:fix
-```
-
-**Using npm**
 
 ```sh
 npm pret:fix
@@ -51,14 +34,6 @@ You can run the `dev` script and open your browser to `http://localhost:8888`.
 
 See complete `props` usage in `pages/index.js` file.
 
-**Using yarn**
-
-```sh
-yarn dev
-```
-
-**Using npm**
-
 ```sh
 npm dev
 ```
@@ -71,13 +46,13 @@ Request
 **Let's clean the code first**
 
 ```sh
-yarn pret:fix
+npm pret:fix
 ```
 
 **Test a build of your changes**
 
 ```sh
-yarn build
+npm build
 
 ```
 
@@ -94,6 +69,21 @@ npx changeset
 
 Follow the prompts to document your changes.
 
+**Commit your changes**
+
+It is generally advised to create a feature branch for your changes and open a merge request.
+
+Create a commit, preferrably using [Commitizen](https://commitizen-tools.github.io/commitizen/).
+
+```sh
+git cz commit
+git push
+```
+
+# Publish the updated Datepicker
+
+**Update npm package**
+
 To release a new version use
 
 ```sh
@@ -108,4 +98,28 @@ necessary tweaks to changelogs, you can publish your packages:
 
 ```sh
 npx changeset publish
+```
+
+**Update github repo**
+
+Make sure to also commit und push the updated package and changelogs to github.
+
+```sh
+git commit -m <message>
+git push
+```
+
+Add a tag with the latest version number to mark a new release. The tag name should reflect the
+updated version property in the `package.json` file.
+
+```sh
+git tag <tagname>
+
+```
+
+Note that tags are not automatically pushed. You will have to explicitly push tags to a shared
+server after you have created them.
+
+```sh
+git push origin <tagname>
 ```
