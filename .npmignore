@@ -5,7 +5,9 @@ node_modules
 .idea
 assets
 .git
-pages
+.github
+.changeset
+app
 styles
 .next
 .rollup.cache

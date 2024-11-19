@@ -20,12 +20,18 @@
         "sourceMap": true,
         "rootDir": "src",
         "allowJs": true,
+        "plugins": [
+            {
+                "name": "next"
+            }
+        ],
         "skipLibCheck": true,
         "noEmit": true,
         "resolveJsonModule": true,
-        "isolatedModules": true
+        "isolatedModules": true,
         // "noUncheckedIndexedAccess": true // should be enabled
+        "incremental": true
     },
     "include": ["src/**/*"],
-    "exclude": ["node_modules"]
+    "exclude": ["node_modules", "dist", "src/**/*.spec.ts", "src/**/*.test.ts", "src/**/__tests__"]
 }
