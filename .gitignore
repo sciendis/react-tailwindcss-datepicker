@@ -16,6 +16,7 @@ dist
 .rpt2_cache
 .eslintcache
 tsconfig.rollup.tsbuildinfo
+*.tgz
 
 # misc
 .DS_Store
