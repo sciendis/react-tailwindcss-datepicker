@@ -8,7 +8,7 @@
 - add `popupClassName` prop to `Datepicker` to allow full overwrite of popover styling (copied from
   parent repo)
 - updated eslint, rollup, prettier, tsconfig and aligned setup with parent repo (copied from parent
-  repo)## 1.8.1 (not published yet)
+  repo)
 
 ## 1.8.4
 
