@@ -65,6 +65,7 @@ export interface DatepickerType {
     configs?: Configs;
     asSingle?: boolean;
     placeholder?: string;
+    popupClassName?: ClassType;
     separator?: string;
     startFrom?: Date | null;
     i18n?: string;

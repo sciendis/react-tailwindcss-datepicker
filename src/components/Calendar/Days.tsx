@@ -320,10 +320,10 @@ const Days: React.FC<Props> = ({
                     day >= 10 ? day : "0" + day
                 }`;
 
-                if (period.start && !period.end) {
-                    dayjs(clickDay).isSame(dayHover) && continueClick();
-                } else if (!period.start && period.end) {
-                    dayjs(clickDay).isSame(dayHover) && continueClick();
+                if (period.start && !period.end && dayjs(clickDay).isSame(dayHover)) {
+                    continueClick();
+                } else if (!period.start && period.end && dayjs(clickDay).isSame(dayHover)) {
+                    continueClick();
                 } else {
                     continueClick();
                 }

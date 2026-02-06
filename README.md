@@ -4,7 +4,7 @@
     <a href="https://react-tailwindcss-datepicker.vercel.app/" target="_blank">
       <img alt="React Tailwindcss Datepicker" width="100" style="border-radius: 100%;" src="https://raw.githubusercontent.com/onesine/react-tailwindcss-datepicker/master/assets/img/calendar_logo.svg?raw=true">
     </a><br><br>
-    A modern date range picker component for React using Tailwind 3 and dayjs. </br>
+    A modern date range picker component for React using Tailwind 4 and dayjs. </br>
     Forked from   <a href="https://github.com/onesine/react-tailwindcss-datepicker" target="_blank">React Tailwindcss Datepicker</a>.
 </p>
 
@@ -38,7 +38,7 @@ Go to [full documentation](https://react-tailwindcss-datepicker.vercel.app/)
 
 ## Installation
 
-⚠️ React Tailwindcss Datepicker uses Tailwind CSS 3 (with the
+⚠️ React Tailwindcss Datepicker uses Tailwind CSS 4 (with the
 [@tailwindcss/forms](https://github.com/tailwindlabs/tailwindcss-forms) plugin) &
 [Dayjs](https://day.js.org/en/) under the hood to work.
 
@@ -67,16 +67,10 @@ Make sure you have installed the peer dependencies as well with the below versio
 
 Add the datepicker to your tailwind configuration using this code
 
-```javascript
-// in your tailwind.config.js
-module.exports = {
-    // ...
-    content: [
-        "./src/**/*.{js,jsx,ts,tsx}",
-        "./node_modules/react-tailwindcss-datepicker/dist/index.esm.js"
-    ]
-    // ...
-};
+```css
+/* in your styles.css */
+@import 'tailwindcss';
+@source './node_modules/react-tailwindcss-datepicker/dist/index.esm.js';
 ```
 
 Then use react-tailwindcss-select in your app:

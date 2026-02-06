@@ -86,11 +86,11 @@ const Calendar: React.FC<Props> = ({
     }, [current, date, previous]);
 
     const hideMonths = useCallback(() => {
-        showMonths && setShowMonths(false);
+        if (showMonths) setShowMonths(false);
     }, [showMonths]);
 
     const hideYears = useCallback(() => {
-        showYears && setShowYears(false);
+        if (showYears) setShowYears(false);
     }, [showYears]);
 
     const clickMonth = useCallback(
