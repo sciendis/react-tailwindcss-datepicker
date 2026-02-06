@@ -4,7 +4,6 @@
 
 ### Patch Changes
 
-- fix dependency array in datepicker to prevent rerenders and fix max update depth bug
 - upgrade to tailwind v4
 - add `popupClassName` prop to `Datepicker` to allow full overwrite of popover styling (copied from
   parent repo)
