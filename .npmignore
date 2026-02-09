@@ -27,5 +27,6 @@ next.config.js
 npm-debug.log
 yarn-error.log
 tailwind.config.js
-postcss.config.js
-tsconfig.tsbuildinfo
+postcss.config.jstsconfig.rollup.tsbuildinfo
+tsconfig.base.json
+tsconfig.rollup.json

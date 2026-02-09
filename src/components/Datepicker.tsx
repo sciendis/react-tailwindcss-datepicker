@@ -23,6 +23,7 @@ const Datepicker: React.FC<DatepickerType> = ({
     configs = undefined,
     asSingle = false,
     placeholder = null,
+    popupClassName = null,
     separator = "~",
     startFrom = new Date(),
     i18n = LANGUAGE,
@@ -77,7 +78,7 @@ const Datepicker: React.FC<DatepickerType> = ({
         if (arrow && div && div.classList.contains("block")) {
             div.classList.remove("block");
             div.classList.remove("translate-y-0");
-            div.classList.remove("opacity-1");
+            div.classList.remove("opacity-100");
             div.classList.add("translate-y-4");
             div.classList.add("opacity-0");
             setTimeout(() => {
@@ -236,6 +237,7 @@ const Datepicker: React.FC<DatepickerType> = ({
                 setSecondDate(nextMonth(dayjs(startFrom)));
             }
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [asSingle, startFrom?.getDate(), value]);
 
     // Variables
@@ -324,20 +326,26 @@ const Datepicker: React.FC<DatepickerType> = ({
         return typeof containerClassName === "function"
             ? containerClassName(defaultContainerClassName)
             : typeof containerClassName === "string" && containerClassName !== ""
-            ? containerClassName
-            : defaultContainerClassName;
+              ? containerClassName
+              : defaultContainerClassName;
     }, [containerClassName]);
+
+    const popupClassNameOverload = useMemo(() => {
+        const defaultPopupClassName =
+            "transition-all ease-out duration-300 absolute z-100 mt-[1px] text-sm lg:text-xs 2xl:text-sm translate-y-4 opacity-0 hidden";
+        return typeof popupClassName === "function"
+            ? popupClassName(defaultPopupClassName)
+            : typeof popupClassName === "string" && popupClassName !== ""
+              ? popupClassName
+              : defaultPopupClassName;
+    }, [popupClassName]);
 
     return (
         <DatepickerContext.Provider value={contextValues}>
             <div className={containerClassNameOverload} ref={containerRef}>
                 <Input setContextRef={setInputRef} />
 
-                <div
-                    // increase z-index so that datepicker popover is always on top
-                    className="transition-all ease-out duration-300 absolute z-50 mt-[1px] text-sm lg:text-xs 2xl:text-sm translate-y-4 opacity-0 hidden"
-                    ref={calendarContainerRef}
-                >
+                <div className={popupClassNameOverload} ref={calendarContainerRef}>
                     <Arrow ref={arrowRef} />
 
                     <div className="mt-2.5 shadow-sm border border-gray-300 px-1 py-0.5 bg-white dark:bg-slate-800 dark:text-white dark:border-slate-600 rounded-lg">

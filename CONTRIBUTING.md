@@ -3,11 +3,11 @@
 Thanks for your interest in contributing to `react-tailwindcss-datepicker`! Please take a moment to
 review this document **before submitting a pull request**.
 
--   [Installation](#installation)
--   [Coding standards](#coding-standards)
--   [Running playground](#running-playgrounds)
--   [Before you make a Pull Request](#before-you-make-a-pull-request)
--   [Publish the updated Datepicker](#publish-the-updated-datepicker)
+- [Installation](#installation)
+- [Coding standards](#coding-standards)
+- [Running playground](#running-playgrounds)
+- [Before you make a Pull Request](#before-you-make-a-pull-request)
+- [Publish the updated Datepicker](#publish-the-updated-datepicker)
 
 ## Installation
 
@@ -23,7 +23,7 @@ We use `prettier` for making sure that the codebase is formatted consistently. T
 any style violations in your code, you can run:
 
 ```sh
-npm pret:fix
+npm run pret:fix
 ```
 
 ## Running playground
@@ -35,7 +35,7 @@ You can run the `dev` script and open your browser to `http://localhost:8888`.
 See complete `props` usage in `pages/index.js` file.
 
 ```sh
-npm dev
+npm run dev
 ```
 
 ## Before you make a Pull Request
@@ -46,13 +46,13 @@ Request
 **Let's clean the code first**
 
 ```sh
-npm pret:fix
+npm run pret:fix
 ```
 
 **Test a build of your changes**
 
 ```sh
-npm build
+npm run build
 
 ```
 
