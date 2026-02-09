@@ -1,6 +1,6 @@
 # @sciendis/react-tailwindcss-datepicker
 
-## 1.8.5 (not published yet)
+## 1.8.5
 
 ### Patch Changes
 
