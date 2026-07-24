@@ -10,10 +10,12 @@
     "scripts": {
         "watch": "rollup -c -w",
         "clean": "rm -rf dist .rollup.cache tsconfig.rollup.tsbuildinfo",
+        "format:check": "prettier --check .",
         "lint": "eslint .",
         "lint:fix": "eslint --fix .",
         "pret:fix": "prettier --write .",
         "format": "npm run pret:fix && npm run lint:fix",
+        "typecheck": "tsc --noEmit -p tsconfig.json",
         "build": "npm run lint && npm run clean && rollup -c rollup.config.js --bundleConfigAsCjs",
         "pub": "npm run build && npm publish",
         "dev": "next dev -p 8888",
@@ -23,6 +25,9 @@
     "repository": {
         "type": "git",
         "url": "git+https://github.com/sciendis/react-tailwindcss-datepicker.git"
+    },
+    "publishConfig": {
+        "@sciendis:registry": "https://gitlab.sciendis.eu/api/v4/projects/198/packages/npm/"
     },
     "keywords": [
         "react-tailwindcss-datepicker",
