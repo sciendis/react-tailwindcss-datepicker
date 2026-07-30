@@ -101,7 +101,7 @@ Add the datepicker to your tailwind configuration using this code
 @source './node_modules/@sciendis/react-tailwindcss-datepicker/dist/index.esm.js';
 ```
 
-Then use react-tailwindcss-select in your app:
+Then use react-tailwindcss-datepicker in your app:
 
 ```jsx
 import React, { useState } from "react";
