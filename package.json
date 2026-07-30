@@ -9,7 +9,7 @@
     "license": "MIT",
     "scripts": {
         "watch": "rollup -c -w",
-        "clean": "rm -rf dist .rollup.cache tsconfig.rollup.tsbuildinfo",
+        "clean": "rm -rf dist .rollup.cache tsconfig.rollup.tsbuildinfo tsconfig.tsbuildinfo",
         "format:check": "prettier --check .",
         "lint": "eslint .",
         "lint:fix": "eslint --fix .",
