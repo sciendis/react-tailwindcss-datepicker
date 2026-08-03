@@ -13,6 +13,7 @@
 -   [Features](#features)
 -   [Documentation](#documentation)
 -   [Installation](#installation)
+-   [Publishing](#publishing)
 -   [Simple Usage](#simple-usage)
 -   [Theming Options](#theming-options)
 -   [Playground](#playground)
@@ -44,14 +45,14 @@ Go to [full documentation](https://react-tailwindcss-datepicker.vercel.app/)
 
 ### Install via npm
 
-```
-$ npm install @sciendis/react-tailwindcss-datepicker
+```sh
+npm install @sciendis/react-tailwindcss-datepicker
 ```
 
 ### Install via yarn
 
-```
-$ yarn add react-tailwindcss-datepicker
+```sh
+yarn add @sciendis/react-tailwindcss-datepicker
 ```
 
 Make sure you have installed the peer dependencies as well with the below versions.
@@ -61,7 +62,34 @@ Make sure you have installed the peer dependencies as well with the below versio
 "react": "^17.0.2 || ^18.2.0"
 ```
 
+## Publishing
+
+The GitHub repository is mirrored to
+[Sciendis GitLab project 198](https://gitlab.sciendis.eu/Development/react-tailwindcss-datepicker-mirror).
+GitLab publishes the package from release tags using `CI_JOB_TOKEN`; no npmjs token is required.
+
+1. Update `version` in `package.json` and add the release notes to `CHANGELOG.md`.
+2. Merge the release commit into `main` on GitHub.
+3. Create and push a matching tag, for example `v1.8.6` for package version `1.8.6`.
+4. Wait for the mirror pipeline to validate, build, inspect, and publish the package.
+
+The pipeline rejects a tag that does not match the package version or a version that already exists
+in the GitLab Package Registry. Historical releases through `1.8.5` have already been migrated.
+
 ## Simple Usage
+
+
+### Configure the GitLab Package Registry
+
+The package is published in the Sciendis GitLab Package Registry. Configure the Sciendis group registry in the consuming project's `.npmrc`:
+
+```ini
+@sciendis:registry=https://gitlab.sciendis.eu/api/v4/groups/8/-/packages/npm/
+//gitlab.sciendis.eu/api/v4/:_authToken=${GITLAB_NPM_TOKEN}
+```
+
+Use a GitLab token with `read_package_registry` access. The broad `/api/v4/` authentication path is
+required because package metadata may refer to tarballs under the owning project.
 
 #### Tailwindcss Configuration
 
@@ -70,14 +98,14 @@ Add the datepicker to your tailwind configuration using this code
 ```css
 /* in your styles.css */
 @import 'tailwindcss';
-@source './node_modules/react-tailwindcss-datepicker/dist/index.esm.js';
+@source './node_modules/@sciendis/react-tailwindcss-datepicker/dist/index.esm.js';
 ```
 
-Then use react-tailwindcss-select in your app:
+Then use react-tailwindcss-datepicker in your app:
 
 ```jsx
 import React, { useState } from "react";
-import Datepicker from "react-tailwindcss-datepicker";
+import Datepicker from "@sciendis/react-tailwindcss-datepicker";
 
 const App = () => {
     const [value, setValue] = useState({
@@ -125,7 +153,7 @@ You can find the demo at [here](https://react-tailwindcss-datepicker.vercel.app/
 
 ## PlayGround
 
-Clone the `master` branch and run commands:
+Clone the `main` branch and run commands:
 
 ```sh
 # Using npm
@@ -141,7 +169,7 @@ Open a browser and navigate to `http://localhost:8888`
 ## Contributing
 
 See
-[CONTRIBUTING.md](https://github.com/sciendis/react-tailwind-datepicker/blob/master/CONTRIBUTING.md)
+[CONTRIBUTING.md](https://github.com/sciendis/react-tailwindcss-datepicker/blob/main/CONTRIBUTING.md)
 
 ## Official Documentation repo
 
