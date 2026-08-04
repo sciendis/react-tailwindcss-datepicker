@@ -81,15 +81,25 @@ in the GitLab Package Registry. Historical releases through `1.8.5` have already
 
 ### Configure the GitLab Package Registry
 
-The package is published in the Sciendis GitLab Package Registry. Configure the Sciendis group registry in the consuming project's `.npmrc`:
+The package is published in the Sciendis GitLab Package Registry. Consumer applications should resolve the
+`@sciendis` scope through the group registry so one configuration works for all
+migrated Sciendis packages.
+
+Create or update the consuming application's `.npmrc` or root `.npmrc`:
 
 ```ini
+# new current setup using gitlab registry
 @sciendis:registry=https://gitlab.sciendis.eu/api/v4/groups/8/-/packages/npm/
-//gitlab.sciendis.eu/api/v4/:_authToken=${GITLAB_NPM_TOKEN}
+//gitlab.sciendis.eu/api/v4/groups/8/-/packages/npm/:_authToken=${GITLAB_NPM_TOKEN}
 ```
 
-Use a GitLab token with `read_package_registry` access. The broad `/api/v4/` authentication path is
-required because package metadata may refer to tarballs under the owning project.
+In your root `.zshrc` or `.bashrc` make sure to export the `GITLAB_NPM_TOKEN`. This token should be a personal access token with
+`api` scope. So that you can read across projects within the group and also write (publish) packages via the terminal.
+
+```bash
+# gitlab package registry
+export GITLAB_NPM_TOKEN="<gitlab_npm_token>"
+```
 
 #### Tailwindcss Configuration
 
